@@ -30,7 +30,7 @@ body {
 .ico-flame {
 	width: 50px;
 	height: 68px;
-	background: url('/assets/img/flame_ico.png')no-repeat;
+	background: url('../images/flame_ico.png')no-repeat;
 }
 
 .link-with-arrow {
@@ -43,7 +43,7 @@ body {
 	&:hover {
 		color: #ff0000;
 		&:after {
-			background: url('/assets//img/arrow.png');
+			background: url('../images/arrow.png');
 		}
 	}
 	&:after {
@@ -60,6 +60,9 @@ body {
 
 .header {
 	height: 100vh;
+	.container {
+		position: relative;
+	}
 	&__logo {
 		display: block;
 		width: 122px;
@@ -76,6 +79,54 @@ body {
 	}
 }
 
+.menu-ico {
+	position: absolute;
+    z-index: 3;
+    right: 20px;
+	> div {
+		width: 30px;
+		height: 30px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		&:hover, &:focus {
+		  outline: none;
+		}
+	  }
+	.line {
+		height: 2px;
+		width: 100%;
+		background: #fff;
+		margin: 2px auto;
+		transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+	&.active {
+		.line:nth-child(1) {
+			transform: rotate(45deg) translate(7px, 7px);
+		}
+		.line:nth-child(2) {
+			visibility: hidden;
+		}
+		.line:nth-child(3) {
+			transform: rotate(-45deg) translate(7px, -6px);
+		}
+		&+.main-menu {
+			display: block;
+		}
+	}
+}
+.main-menu {
+	position: fixed;
+	display: none;
+	left: 0;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	background: #dddddd;
+	z-index: 2;
+}
 .video {
 	position: absolute;
 	top: 0;
@@ -83,7 +134,7 @@ body {
 	height: 100vh;
 	// 100vh//100% full height
 	// min-height: 680px;
-	background: url('/assets/img/video_bg.png');
+	background: url('../images/video_bg.png');
 	z-index: -1;
 	&__center {
 		padding: 12vw 0;
@@ -96,7 +147,7 @@ body {
 		width: 50px;
 		height: 68px;
 		margin: 0 auto;
-		background: url('/assets/img/flame_ico.png')no-repeat;
+		background: url('./assets/img/flame_ico.png')no-repeat;
 	}
 	&__text {
 		width: 200px;
@@ -185,7 +236,7 @@ body {
 			right: 0;
 			content: '';
 			display: inline-block;
-			background: url('/assets//img/arrow.png');
+			background: url('../images/arrow.png');
 			width: 97px;
 			height: 22px;
 			vertical-align: top;

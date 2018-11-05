@@ -55,12 +55,12 @@ gulp.task('scripts', () => {
 });
 
 gulp.task('image', () => {
-    return gulp.src('images/*.*')
+    return gulp.src('./assets/img/*.*')
         .pipe(imagemin())
         .pipe(gulp.dest(build_path+'/images'))
 });
 
-gulp.task('dev', ['sass'], function () {
+gulp.task('dev', ['sass', 'image'], function () {
 
   browserSync({
     server:{baseDir: './'}

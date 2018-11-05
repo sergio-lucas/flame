@@ -33,7 +33,21 @@
 						<use xlink:href="#logo"></use>
 					</svg>
 				</a>
-				<div class="nav-trigger">--</div>
+				<div class="menu__wrapper menu-ico">
+					<div class="menu__item--hamburger" tabindex="1">
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+					</div>
+				</div>
+				<nav class="main-menu">
+					<ul class="main-menu__block">
+						<li class="main-menu__item"><a href="#" class="main-menu__link">About</a></li>
+						<li class="main-menu__item"><a href="#" class="main-menu__link">Works</a></li>
+						<li class="main-menu__item"><a href="#" class="main-menu__link">Services</a></li>
+						<li class="main-menu__item"><a href="#" class="main-menu__link">Contact</a></li>
+					</ul>
+				</nav>
 			</div>
 		</div>
 	</header>
@@ -164,5 +178,12 @@
 			</div>
 		</div>
 	</footer>
+	<script>
+		var menu_ico = document.querySelector('.menu-ico ');
+		menu_ico.addEventListener('click', function(e) {
+			e.preventDefault();
+			this.classList.toggle('active')
+		})
+	</script>
 </body>
 </html>
