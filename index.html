@@ -192,12 +192,14 @@ minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 			e.preventDefault();
 			this.classList.toggle('active')
 		})
-		document.addEventListener('touchmove', function(event) {
-	        event = event.originalEvent || event;
-	        if (event.scale !== 1) {
-	           event.preventDefault();
-	        }
-	    }, false);
+		var lastTouchEnd = 0;
+		document.addEventListener('touchend', function (event) {
+		  var now = (new Date()).getTime();
+		  if (now - lastTouchEnd <= 300) {
+		    event.preventDefault();
+		  }
+		  lastTouchEnd = now;
+		}, false);
 	</script>
 </body>
 </html>
