@@ -192,6 +192,12 @@ minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 			e.preventDefault();
 			this.classList.toggle('active')
 		})
+		document.addEventListener('touchmove', function(event) {
+	        event = event.originalEvent || event;
+	        if (event.scale !== 1) {
+	           event.preventDefault();
+	        }
+	    }, false);
 	</script>
 </body>
 </html>
