@@ -5,23 +5,15 @@
 	<link rel="stylesheet" href="./build/styles/main.css">
 	<title>Document</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, 
-minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<meta name="HandheldFriendly" content="true">
-	<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-	<style>
-		html {
-		    -webkit-text-size-adjust: none
-		}
-	</style>
+minimum-scale=1.0, maximum-scale=1.0">
 </head>
 <body>
 	<div class="svg-sprite">
 			<svg width="0" height="0" class="hidden">
 					<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.3 841.9" id="logo">
-					  <text transform="translate(66.535 256.385)">
-						<tspan style="font-family:'Lato-Black';font-size:73.1126px;letter-spacing:5" x="0" y="0">FLAME </tspan>
-						<tspan style="font-family:'Lato-Black';font-size:73.1126px;letter-spacing:5" x="0" y="97.5">SOLUTIONS</tspan>
+					  <text transform="translate(66.535 256.385)" style=>
+						<tspan style="font-family:'Lato';font-weight: 600;font-size:90px;letter-spacing:5" x="0" y="0">FLAME </tspan>
+						<tspan style="font-family:'Lato';font-weight: 600;font-size:90px;letter-spacing:5" x="0" y="97.5">SOLUTIONS</tspan>
 					  </text>
 					  <path d="M71.2 401.6h35v13.7h-35zm49.5-281.9c0-14.5-15-23.4-18-25.1-.1-.1-.2.1-.1.1 6.8 7.3 1.3 18.8 1.3 18.8-2-9-8.2-10.3-9.6-10.5-.1 0-.2.1-.1.2 2.1 2.3 2.2 5 2.2 5s-.2 7.9-7.6 7.9c-6.3 0-7.4-5.6-7.5-7.2 0-1.1.2-2.3.7-3.3.4-.9 1-1.8 1.7-2.6 2.3-2.7 22.6-27.8 2.9-36.6-.1 0-.1.1-.1.1 1.1 1.1 5 5.9-.3 11.1-5.8 5.8-27.9 18-29.4 39.6h-.1c-.2 1.3-.2 2.6-.2 3.9 0 17.8 14.4 32.2 32.2 32.2 17.8 0 32.2-14.4 32.2-32.2-.1-.4-.2-.9-.2-1.4z"></path>
 					</symbol>
@@ -63,7 +55,10 @@ minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	</header>
 	<section class="video">
 		<div class="container">
-				<div class="video__center">
+			<video class="main_page_header_video" loop autoplay preload="auto" >
+	            <source src="assets/img/bg_video.mp4" type="video/mp4">
+            </video>
+				<!--< div class="video__center">
 					<div class="ico-flame"></div>
 					<h1 class="video__text">
 							GLOW
@@ -71,12 +66,13 @@ minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 							BE ON
 							FIRE
 					</h1>
-				</div>
+				< /div>-->
 		</div>
 	</section>
 	<section class="content">
 		<div class="container">
 			<div class="content__float"><div class="float-menu">
+			<div id="checkdiv"></div>
 			<ul class="float-menu__block">
 			<li class="float-menu__item"><a href="#about" class="float-menu__link">About</a></li>
 			<li class="float-menu__item"><a href="#works" class="float-menu__link">Works</a></li>
@@ -87,9 +83,13 @@ minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 			<div class="content__container">
 				<div class="content__item">
 					<div class="about" id="about">
-						<h2 class="about__title title">We were created to help you
+						<h2 class="about__title title">We were created to help you <br>
 						glow and be on fire</h2>
 						<p class="about__text">Our creative agency develops full-cycle concepts and ideas for corporate and individual clients. We help our clients to light up their target audience and engage communities by providing state-of-the-art design solutions</p>
+						<h2 class="about__title title">When we say art – <br> we mean it. </h2>
+						<p class="about__text">Whether it is a simple illustration for a local magazine or a complex B2B project – for us it is an artwork. Every detail of our designs is carefully drafted by our
+experienced team of artists, painters and creative marketers and then
+professionally implemented by the project management team. </p>
 					</div>
 				</div>
 				<div class="content__item">
@@ -154,15 +154,10 @@ minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		</div>
 	</section>
 	
-	<footer class="footer">
+	<footer class="footer" id="contact">
 		<div class="container">
 			<div class="flex-container">
 					<div class="footer__col">
-						<div class="footer__logo">
-							<svg class="icon">
-								<use xlink:href="#logo"></use>
-							</svg>
-						</div>
 					</div>
 					<div class="footer__container">
 						<h2 class="title footer__title">CONTACT US:</h2>
@@ -188,17 +183,61 @@ minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 			</div>
 		</div>
 	</footer>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script>
 		var menu_ico = document.querySelector('.menu-ico ');
 		menu_ico.addEventListener('click', function(e) {
 			e.preventDefault();
 			this.classList.toggle('active')
 		})
-		document.documentElement.addEventListener('touchstart', function (event) {
-	      if (event.touches.length > 1) {
-	        event.preventDefault();
-	      }
-	    }, false);
+
+		$(document).ready(function () {
+			$(window).scroll(function(){
+			        var window_top = $(window).scrollTop() + 12; 
+			       // the "12" should equal the margin-top value for nav.stickydiv
+			        var div_top = $('#checkdiv').offset().top;
+			        if (window_top >= div_top) {
+			                $('.float-menu__block').addClass('stickydiv');
+			            } else {
+			                $('.float-menu__block').removeClass('stickydiv');
+			            }
+			    });  
+
+			$(document).on("scroll", onScroll);
+
+			$('.float-menu__link').on('click', function (e) {
+			      e.preventDefault();
+			        $(document).off("scroll");
+			         $('a').each(function () {
+			            $(this).removeClass('active');
+			        })
+			        $(this).addClass('active');
+			         var target = this.hash,
+			         menu = target;
+			         $target = $(target);
+			       $('html, body').stop().animate({
+			            'scrollTop': $target.offset().top+2
+			        }, 600, 'swing', function () {
+			            window.location.hash = target;
+			            $(document).on("scroll", onScroll);
+			        });
+			    });
+			});
+
+			function onScroll(event) {
+			    var scrollPos = $(document).scrollTop();
+			    $('.float-menu__block a').each(function () {
+		        	var currLink = $(this);
+			       var refElement = $(currLink.attr("href"));
+			        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+			            $('.float-menu__block a').removeClass("active");
+			            currLink.addClass("active");
+			        }
+			        else{
+			            currLink.removeClass("active");
+			        }
+			    });
+			}
 	</script>
 </body>
 </html>

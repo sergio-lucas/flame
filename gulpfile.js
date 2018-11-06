@@ -25,7 +25,7 @@ gulp.task('build', () => {
 });
 
 gulp.task('sass', () => {
-    return gulp.src('./assets/main.scss')
+    return gulp.src('./assets/scss/main.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.write())
@@ -60,7 +60,7 @@ gulp.task('image', () => {
         .pipe(gulp.dest(build_path+'/images'))
 });
 
-gulp.task('dev', ['sass', 'image'], function () {
+gulp.task('dev', ['sass'], function () {
 
   browserSync({
     server:{baseDir: './'}

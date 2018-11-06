@@ -1,0 +1,36 @@
+// 100 light
+@font-face {
+    font-family: 'Lato';
+    font-display: swap;
+    src: url('/fonts/lato/lato-light-webfont.woff2') format('woff2'),
+         url('/fonts/lato/lato-light-webfont.woff') format('woff');
+    font-weight: 100;
+}
+
+// 400 regular
+@font-face {
+    font-family: 'Lato';
+    font-display: swap;
+    src: url('/fonts/lato/lato-regular-webfont.woff2') format('woff2'),
+         url('/fonts/lato/lato-regular-webfont.woff') format('woff');
+    font-weight: 400;
+}
+
+// 600 bold
+@font-face {
+    font-family: 'Lato';
+    font-display: swap;
+    src: url('/fonts/lato/lato-bold-webfont.woff2') format('woff2'),
+         url('/fonts/lato/lato-bold-webfont.woff') format('woff');
+    font-weight: 600;
+}
+
+// anton
+// 400 regular
+@font-face {
+    font-family: 'Anton';
+    font-display: swap;
+    src: url('/fonts/anton/anton-regular-webfont.woff2') format('woff2'),
+         url('/fonts/anton/anton-regular-webfont.woff') format('woff');
+    font-weight: 400;
+}
