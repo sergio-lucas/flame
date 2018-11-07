@@ -354,6 +354,7 @@ body {
 		display: flex;
 	}
 	&__title {
+		width: 60%;
 		color: #ffffff;
 		font-family: Anton;
 		font-size: 56px;
@@ -373,7 +374,7 @@ body {
 		display: block;
 		width: 35px;
 		height: 35px;
-		margin: 35px auto;
+		margin: 35px 0;
 		& .icon {
 			fill: #fff;
 		}
