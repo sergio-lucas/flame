@@ -58,7 +58,16 @@ body {
 		margin-top: 4px;
 	}
 }
-
+body.active {
+	overflow: hidden;
+}
+.active .header__logo .icon {
+	transition: fill .3s;
+	fill: #231f20;
+}
+.active .menu-ico .line {
+	background: #ff0000;
+}
 .header {
 	height: 100vh;
 	.container {
@@ -66,8 +75,11 @@ body {
 	}
 	&__logo {
 		display: block;
+		position: absolute;
+		z-index: 3;
 		width: 122px;
 		height: 92px;
+		overflow: hidden;
 		& .icon {
 			fill: #fff;
 			width: 100%;
@@ -77,6 +89,7 @@ body {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		height: 79px;
 	}
 }
 
@@ -105,7 +118,7 @@ body {
 	}
 	&.active {
 		.line:nth-child(1) {
-			transform: rotate(45deg) translate(7px, 7px);
+			transform: rotate(45deg) translate(8px, 7px);
 		}
 		.line:nth-child(2) {
 			visibility: hidden;
@@ -120,13 +133,65 @@ body {
 }
 .main-menu{
 	position: fixed;
+	padding: 120px 0;
 	display: none;
 	left: 0;
 	top: 0;
 	height: 100vh;
 	width: 100%;
-	background: #dddddd;
+	background: #e1e1e1;
+	box-sizing: border-box;
 	z-index: 2;
+	.container {
+		display: flex;
+		height: 100%;
+	}
+	&__block {
+		width: 58%;
+		float: left;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		text-transform: uppercase;
+	}
+	&__link {
+		font-size: 36px;
+		font-family: 'Anton';
+		text-decoration: none;
+		color: #000000;
+		transition: color .3s;
+		&:hover {
+			color: #ff0000;
+		}
+	}
+}
+.header-contact {
+	align-self: flex-end;
+	width: 42%;
+	float: left;
+	&__title {
+		font-family: 'Anton';
+		font-size: 55px;
+	}
+	&__email {
+		display: inline-block;
+		margin: 20px 0 30px;
+		font-family: 'Lato';
+		font-size: 23px;
+		text-decoration: none;
+		color: #000000;
+	}
+	&__ico {
+		display: inline-block;
+		width: 35px;
+		height: 35px;
+		&:not(:last-child) {
+			margin-right: 35px;
+		}
+		.icon {
+			width: 100%;
+		}
+	}
 }
 .video {
 	position: absolute;

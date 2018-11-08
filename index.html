@@ -42,14 +42,37 @@ minimum-scale=1.0, maximum-scale=1.0">
 						<div class="line"></div>
 					</div>
 				</div>
-				<nav class="main-menu">
-					<ul class="main-menu__block">
-						<li class="main-menu__item"><a href="#" class="main-menu__link">About</a></li>
-						<li class="main-menu__item"><a href="#" class="main-menu__link">Works</a></li>
-						<li class="main-menu__item"><a href="#" class="main-menu__link">Services</a></li>
-						<li class="main-menu__item"><a href="#" class="main-menu__link">Contact</a></li>
-					</ul>
-				</nav>
+				<div class="main-menu">
+					<div class="container">
+						<ul class="main-menu__block">
+							<li class="main-menu__item"><a href="#" class="main-menu__link">About</a></li>
+							<li class="main-menu__item"><a href="#" class="main-menu__link">Works</a></li>
+							<li class="main-menu__item"><a href="#" class="main-menu__link">Services</a></li>
+							<li class="main-menu__item"><a href="#" class="main-menu__link">Contact</a></li>
+						</ul>
+						<div class="header-contact">
+							<div class="header-contact__title">CONTACT US:</div>
+							<a href="#" class="header-contact__email">info@flame.solutions</a>
+							<div class="header-contact__social">
+								<a href="#" class="header-contact__ico">
+									<svg class="icon" viewBox="0 0 49.652 49.652">
+										<use xlink:href="#facebook"></use>
+									</svg>
+								</a>
+								<a href="#" class="header-contact__ico">
+									<svg class="icon" viewBox="0 0 49.652 49.652">
+										<use xlink:href="#instagram"></use>
+									</svg>
+								</a>
+								<a href="#" class="header-contact__ico">
+									<svg class="icon" viewBox="0 0 49.652 49.652">
+										<use xlink:href="#behance"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -188,7 +211,8 @@ professionally implemented by the project management team. </p>
 		var menu_ico = document.querySelector('.menu-ico ');
 		menu_ico.addEventListener('click', function(e) {
 			e.preventDefault();
-			this.classList.toggle('active')
+			this.classList.toggle('active');
+			document.body.classList.toggle('active');
 		})
 
 		$(document).ready(function () {
