@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./build/styles/main.css">
+        <title>Document</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, 
+    minimum-scale=1.0, maximum-scale=1.0">
+    </head>
+<body>
+        <div class="svg-sprite">
+                <svg width="0" height="0" class="hidden">
+                        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.3 841.9" id="logo">
+                          <text transform="translate(66.535 256.385)" style=>
+                            <tspan style="font-family:'Lato';font-weight: 600;font-size:90px;letter-spacing:5" x="0" y="0">FLAME </tspan>
+                            <tspan style="font-family:'Lato';font-weight: 600;font-size:90px;letter-spacing:5" x="0" y="97.5">SOLUTIONS</tspan>
+                          </text>
+                          <path d="M71.2 401.6h35v13.7h-35zm49.5-281.9c0-14.5-15-23.4-18-25.1-.1-.1-.2.1-.1.1 6.8 7.3 1.3 18.8 1.3 18.8-2-9-8.2-10.3-9.6-10.5-.1 0-.2.1-.1.2 2.1 2.3 2.2 5 2.2 5s-.2 7.9-7.6 7.9c-6.3 0-7.4-5.6-7.5-7.2 0-1.1.2-2.3.7-3.3.4-.9 1-1.8 1.7-2.6 2.3-2.7 22.6-27.8 2.9-36.6-.1 0-.1.1-.1.1 1.1 1.1 5 5.9-.3 11.1-5.8 5.8-27.9 18-29.4 39.6h-.1c-.2 1.3-.2 2.6-.2 3.9 0 17.8 14.4 32.2 32.2 32.2 17.8 0 32.2-14.4 32.2-32.2-.1-.4-.2-.9-.2-1.4z"></path>
+                        </symbol>
+                        <symbol xmlns="http://www.w3.org/2000/svg" id="facebook">
+                            <path d="M24.826 0C11.137 0 0 11.137 0 24.826c0 13.688 11.137 24.826 24.826 24.826 13.688 0 24.826-11.138 24.826-24.826C49.652 11.137 38.516 0 24.826 0zM31 25.7h-4.039v14.396h-5.985V25.7h-2.845v-5.088h2.845v-3.291c0-2.357 1.12-6.04 6.04-6.04l4.435.017v4.939h-3.219c-.524 0-1.269.262-1.269 1.386v2.99h4.56L31 25.7z"/>
+                        </symbol>
+                        <symbol xmlns="http://www.w3.org/2000/svg" id="instagram">
+                            <path d="M24.825 29.796a4.978 4.978 0 0 0 4.972-4.97 4.954 4.954 0 0 0-.94-2.897 4.964 4.964 0 0 0-4.029-2.073c-1.659 0-3.126.82-4.031 2.072a4.947 4.947 0 0 0-.94 2.897 4.973 4.973 0 0 0 4.968 4.971zM35.678 18.746V13.96l-.623.002-4.164.013.016 4.787z"/><path d="M24.826 0C11.137 0 0 11.137 0 24.826c0 13.688 11.137 24.826 24.826 24.826 13.688 0 24.826-11.138 24.826-24.826C49.652 11.137 38.516 0 24.826 0zm14.119 21.929v11.56a5.463 5.463 0 0 1-5.457 5.458H16.164a5.462 5.462 0 0 1-5.457-5.458V16.165a5.462 5.462 0 0 1 5.457-5.457h17.323a5.463 5.463 0 0 1 5.458 5.457v5.764z"/><path d="M32.549 24.826c0 4.257-3.464 7.723-7.723 7.723s-7.722-3.466-7.722-7.723a7.67 7.67 0 0 1 .568-2.897h-4.215v11.56a2.706 2.706 0 0 0 2.706 2.704h17.323a2.707 2.707 0 0 0 2.706-2.704v-11.56h-4.217c.367.894.574 1.873.574 2.897z"/></symbol>
+                            <symbol xmlns="http://www.w3.org/2000/svg" id="behance">
+                                <path d="M20.894 20.686c0-1.9-1.293-1.9-1.293-1.9H14.28v4.078h4.991c.863 0 1.623-.275 1.623-2.178zM33.221 22.864c-2.821 0-3.215 2.814-3.215 2.814h6.002c0 .002.037-2.814-2.787-2.814zM19.601 25.68h-5.318v4.886h4.711c.08 0 .198.004.339 0 .757-.019 2.196-.235 2.196-2.374 0-2.536-1.928-2.512-1.928-2.512z"/><path d="M24.826 0C11.137 0 0 11.137 0 24.826c0 13.688 11.137 24.826 24.826 24.826 13.688 0 24.826-11.138 24.826-24.826C49.652 11.137 38.516 0 24.826 0zm4.393 16.615h7.539v2.251h-7.539v-2.251zm-3.812 11.804c0 5.577-5.806 5.395-5.806 5.395h-9.508V15.539h9.508c2.891 0 5.172 1.597 5.172 4.867 0 3.269-2.788 3.477-2.788 3.477 3.675-.001 3.422 4.536 3.422 4.536zm14.105-.3h-9.471c0 3.396 3.217 3.182 3.217 3.182 3.036 0 2.93-1.966 2.93-1.966h3.219c0 5.218-6.254 4.859-6.254 4.859-7.503 0-7.021-6.985-7.021-6.985s-.007-7.022 7.021-7.022c7.396 0 6.357 7.932 6.359 7.932z"/>
+                            </symbol>
+                            <symbol xmlns="http://www.w3.org/2000/svg" id="arrow">
+                                    <path class="st0" d="M1000,498c0-0.1,0-0.1,0-0.2c0.1-3.6-1.7-7.1-5-9.1L822.8,385.8c-4.9-2.9-11.3-1.3-14.2,3.6l-0.2,0.4
+                                    c-2.9,4.9-1.3,11.3,3.6,14.2l140,83.7H10.3C4.7,487.7,0,492.3,0,498c0,5.7,4.7,10.3,10.3,10.3h941.6l-140,83.7
+                                    c-4.9,2.9-6.5,9.3-3.6,14.2l0.2,0.4c2.9,4.9,9.3,6.5,14.2,3.6L995,507.3c3.3-2,5.1-5.5,5-9.1C1000,498.1,1000,498.1,1000,498z"/>
+                            </symbol>
+                      </svg>
+        </div>
+        <header role="header" class="header">
+                <div class="container">
+                    <div class="header__flex">
+                        <a href="/" class="header__logo">
+                            <svg class="icon">
+                                <use xlink:href="#logo"></use>
+                            </svg>
+                        </a>
+                        <div class="menu__wrapper menu-ico">
+                            <div class="menu__item--hamburger" tabindex="1">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                        <div class="main-menu">
+                            <div class="container">
+                                <ul class="main-menu__block">
+                                    <li class="main-menu__item"><a href="#" class="main-menu__link">About</a></li>
+                                    <li class="main-menu__item"><a href="#" class="main-menu__link">Works</a></li>
+                                    <li class="main-menu__item"><a href="#" class="main-menu__link">Services</a></li>
+                                    <li class="main-menu__item"><a href="#" class="main-menu__link">Contact</a></li>
+                                </ul>
+                                <div class="header-contact">
+                                    <div class="header-contact__title">CONTACT US:</div>
+                                    <a href="#" class="header-contact__email">info@flame.solutions</a>
+                                    <div class="header-contact__social">
+                                        <a href="#" class="header-contact__ico">
+                                            <svg class="icon" viewBox="0 0 49.652 49.652">
+                                                <use xlink:href="#facebook"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="header-contact__ico">
+                                            <svg class="icon" viewBox="0 0 49.652 49.652">
+                                                <use xlink:href="#instagram"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="header-contact__ico">
+                                            <svg class="icon" viewBox="0 0 49.652 49.652">
+                                                <use xlink:href="#behance"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="video" style="background: url(assets/img/video_bg.png)">
+                    <div class="nav_items">
+                        <div class="header_title">Web <br> design</div>
+                        <a href="#" class="header_next"><span>Web design </span><svg class="icon" viewBox="0 0 1000 1000">
+                                <use xlink:href="#arrow"></use>
+                            </svg>
+                        </a>
+                    </div>
+            </section>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+		var menu_ico = document.querySelector('.menu-ico ');
+		menu_ico.addEventListener('click', function(e) {
+			e.preventDefault();
+			this.classList.toggle('active');
+			document.body.classList.toggle('active');
+		})
+
+		$(document).ready(function () {
+			$(window).scroll(function(){
+			        var window_top = $(window).scrollTop() + 12; 
+			       // the "12" should equal the margin-top value for nav.stickydiv
+			        var div_top = $('#checkdiv').offset().top;
+			        if (window_top >= div_top) {
+			                $('.float-menu__block').addClass('stickydiv');
+			            } else {
+			                $('.float-menu__block').removeClass('stickydiv');
+			            }
+			    });  
+
+			$(document).on("scroll", onScroll);
+
+			$('.float-menu__link').on('click', function (e) {
+			      e.preventDefault();
+			        $(document).off("scroll");
+			         $('a').each(function () {
+			            $(this).removeClass('active');
+			        })
+			        $(this).addClass('active');
+			         var target = this.hash,
+			         menu = target;
+			         $target = $(target);
+			       $('html, body').stop().animate({
+			            'scrollTop': $target.offset().top+2
+			        }, 600, 'swing', function () {
+			            window.location.hash = target;
+			            $(document).on("scroll", onScroll);
+			        });
+			    });
+			});
+
+			function onScroll(event) {
+			    var scrollPos = $(document).scrollTop();
+			    $('.float-menu__block a').each(function () {
+		        	var currLink = $(this);
+			       var refElement = $(currLink.attr("href"));
+			        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+			            $('.float-menu__block a').removeClass("active");
+			            currLink.addClass("active");
+			        }
+			        else{
+			            currLink.removeClass("active");
+			        }
+			    });
+			}
+	</script>
+</body>
+</html>
