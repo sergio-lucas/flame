@@ -29,8 +29,9 @@ body {
 }
 
 .flame {
-	width: 17px;
+	width: 27px;
 	height: 24px;
+	margin-bottom: 14px;
 	&__ico {
 		width: 100%;
 	}
@@ -84,8 +85,8 @@ body.active {
 		display: block;
 		position: absolute;
 		z-index: 3;
-		width: 111px;
-		height: 121px;
+		width: 122px;
+		height: 92px;
 		overflow: hidden;
 		& .icon {
 			fill: #fff;
@@ -96,7 +97,7 @@ body.active {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		height: 121px;
+		height: 79px;
 	}
 }
 
@@ -273,7 +274,7 @@ body.active {
 .float-menu {
 	width: 25%;
 	flex-shrink: 0;
-	margin-top: 80px;
+	margin-top: 34px;
 	&__block {
 		list-style-type: none;
 		padding: 0;
@@ -286,7 +287,7 @@ body.active {
    		}
    	}
 	&__item {
-		margin-bottom: 10px;
+		margin-bottom: 7px;
 	}
 	&__link {
 		position: relative;
