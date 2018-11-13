@@ -1,11 +1,21 @@
 @media (max-width: 1024px) {
+    .col-55,
+    .col-45 {
+        width: 100%;
+    }
+    .header {
+        // height: 50vh;
+    }
+    .video {
+        // height: 50vh;
+    }
+    .main-menu {
+        // height: 50vh;
+    }
     .content__float {
         display: block;
     }
-    
-    .float-menu {
-        display: none;
-    }
+
     .flex-container {
         display: block;
     }
@@ -15,6 +25,18 @@
     
     .float-menu {
         display: none;
+        &--right {
+            display: block;
+            width: 100%;
+            margin: 0;
+        }
+    }
+    .float-menu--right a {
+        display: flex;
+        justify-content: space-between;
+    }
+    .next-page.float-menu__block.stickydiv {
+        position: relative;
     }
     
     .footer__container {
@@ -24,14 +46,81 @@
     .footer__social {
         padding: 0;
     }
+    .container {
+        max-width: 608px;
+    }
+    .nav_items {
+        max-width: 608px;
+    }
+    .content__container--half {
+        width: 100%;
+        max-width: 608px;
+        margin: 0 auto;
+    }
+    .footer__title {
+        width: 100%;
+    }
+    .project {
+        margin-bottom: 0;
+    }
+    .content .title {
+        margin-bottom: 40px;
+    }
+    .header_title {
+        font-size: 6em;
+        line-height: 1em;
+    }
+    .works__see-more {
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 767px) {
-    .col-6 {
+    .header__flex.sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        padding: 0 10%;
+        background: #000000;
+        margin: 0 auto;
+        transition: all .3s;
+        .header__logo {
+            top: 12px;
+        }
+        .icon {
+            width: 50px;
+            height: 68px;
+            &:first-child {
+                display: none;
+            }
+        }
+    }
+    .col-55 {
 		width: 100%;
 	}
     .only-mob {
         display: block;
+    }
+    h2.only-mob.title {
+        color: #ff4200;
+        &:after {
+            content: '';
+            margin-top: 17px;
+            display: block;
+            width: 30px;
+            height: 17px;
+            background: #ff4200;
+        }
+        .icon {
+            width: 50px;
+            height: 68px;
+            display: block;
+            fill: #ff4200;
+        }
+        
     }
     .footer__container {
         display: block;
@@ -50,5 +139,14 @@
         height: 40vh;
         box-sizing: border-box;
         margin: 0;
+    }
+    .works__details--wrap {
+        margin: 40px 0 0;
+    }
+    .main-menu__block {
+        width: 40%;
+    }
+    .header-contact {
+        width: 60%;
     }
 }
