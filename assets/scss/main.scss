@@ -122,6 +122,9 @@ body.active {
 	.container {
 		position: relative;
 	}
+	&--half {
+		height: 55vh;
+	}
 	&__logo {
 		display: block;
 		position: relative;
@@ -133,6 +136,10 @@ body.active {
 		& .icon {
 			fill: #fff;
 			width: 100%;
+			transition: fill .3s;
+		}
+		&:hover .icon {
+			fill: #f00;
 		}
 	}
 	&__flex {
@@ -198,15 +205,75 @@ body.active {
 	transition: all .3s;
 	.container {
 		display: flex;
+		justify-content: space-between;
 		height: 100%;
 	}
 	&__block {
-		width: 58%;
+		// width: 58%;
 		float: left;
+	}
+	&__item {
+		position: relative;
+		vertical-align: top;
+		&--submenu {
+			&:hover {
+				.main-menu__submenu {
+					display: flex;
+				}
+				&>a {
+					color: #ff0000;
+				}
+			}
+		}
+	}
+	&__list {
 		margin: 0;
 		padding: 0;
 		list-style-type: none;
 		text-transform: uppercase;
+	}
+	&__submenu {
+		display: none;
+		position: absolute;
+		top: 25px;
+		min-width: 150px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		left: 100%;
+		cursor: pointer;
+		&:before {
+			flex-shrink: 0;
+			content: '';
+			display: inline-block;
+			background: url(../images/arrow.png) center right no-repeat;
+			width: 8vw;
+			height: 22px;
+			vertical-align: top;
+			margin-right: 2vw;
+		}
+	}
+	&__submenu-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	&__submenu-item {
+		margin-bottom: 20px;
+	}
+	&__submenu-link {
+		font-size: 16px;
+		line-height: 21px;
+		font-weight: 400;
+		font-family: 'Lato';
+		color: #000;
+		text-transform: uppercase;
+		text-decoration: none;
+		white-space: nowrap;
+		transition: color .3s;
+		&:hover {
+			color: #ff0000;
+		}
 	}
 	&__link {
 		font-size: 36px;
@@ -221,7 +288,7 @@ body.active {
 }
 .header-contact {
 	align-self: flex-end;
-	width: 42%;
+	// width: 42%;
 	float: left;
 	&__title {
 		font-family: 'Anton';
@@ -234,6 +301,10 @@ body.active {
 		font-size: 23px;
 		text-decoration: none;
 		color: #000000;
+		transition: color .3s;
+		&:hover {
+			color: #f00;
+		}
 	}
 	&__ico {
 		display: inline-block;
@@ -244,6 +315,10 @@ body.active {
 		}
 		.icon {
 			width: 100%;
+			transition: fill .3s;
+		}
+		&:hover .icon {
+			fill: #f00;
 		}
 	}
 }
@@ -261,6 +336,9 @@ body.active {
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
+	&--half {
+		height: 55vh;
+	}
 	&__logo {
 		position: absolute;
 		width: 294px;
@@ -272,9 +350,9 @@ body.active {
 		transform: translate(-50%, -50%);
 	}
 	&__logo-img {
-		max-width: 294px;
+		max-width: 200px;
 		display: block;
-		max-height: 294px;
+		max-height: 200px;
 		margin: 0 auto;
 		flex-grow: 1;
 		width: 100%;
@@ -361,6 +439,16 @@ body.active {
 				color: #ffffff;
 				&:after {
 					background: #ffffff;
+					// width: 0;
+				}
+				&.active:after  {
+					width: 10px;
+				}
+				&--active:after {
+					width: 0;
+				}
+				&:hover:after {
+					width: 10px;
 				}
 			}
 			& .flame__ico {
@@ -378,6 +466,8 @@ body.active {
    		}
    	}
 	&__item {
+		position: relative;
+		padding-bottom: 7px;
 		margin-bottom: 7px;
 	}
 	&__link {
@@ -390,6 +480,7 @@ body.active {
 		transition: color .3s;
 		&:after {
 			position: absolute;
+			bottom: -5px;
 			content: '';
 			display: block;
 			width: 0px;
@@ -399,6 +490,12 @@ body.active {
 		}
 		&.active,
 		&:hover {
+			color: #f00;
+			&:after {
+				width: 10px;
+			}
+		}
+		&--active {
 			color: #f00;
 			&:after {
 				width: 10px;
@@ -583,6 +680,10 @@ body.active {
 		overflow: hidden;
 		& .icon {
 			fill: #fff;
+			transition: fill .3s;
+		}
+		&:hover .icon {
+			fill: #f00;
 		}
 	}
 	&__copy {
@@ -615,8 +716,10 @@ body.active {
 }
 .header_title {
 	font-family: 'Anton';
-	font-size: 150px;
-	line-height: 160px;
+	// font-size: 150px;
+	// line-height: 160px;
+	font-size: 6em;
+	line-height: 1em;
 	color: #ffffff;
 }
 .header_next {
