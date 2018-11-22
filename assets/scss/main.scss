@@ -123,7 +123,7 @@ body.active {
 		position: relative;
 	}
 	&--half {
-		height: 55vh;
+		height: 75vh;
 	}
 	&__logo {
 		display: block;
@@ -267,7 +267,7 @@ body.active {
 		font-weight: 400;
 		font-family: 'Lato';
 		color: #000;
-		text-transform: uppercase;
+		text-transform: initial;
 		text-decoration: none;
 		white-space: nowrap;
 		transition: color .3s;
@@ -337,7 +337,7 @@ body.active {
 		background-size: cover;
 	}
 	&--half {
-		height: 55vh;
+		height: 75vh;
 	}
 	&__logo {
 		position: absolute;
@@ -434,7 +434,7 @@ body.active {
 	margin-top: 34px;
 	&__block {
 		&.in_footer:not(.next-page) {
-			bottom: -230px !important;
+			bottom: -345px !important;
 			& .float-menu__link {
 				color: #ffffff;
 				&:after {
@@ -467,8 +467,8 @@ body.active {
    	}
 	&__item {
 		position: relative;
-		padding-bottom: 7px;
-		margin-bottom: 7px;
+		padding-bottom: 4px;
+		margin-bottom: 4px;
 	}
 	&__link {
 		position: relative;
@@ -508,6 +508,7 @@ body.active {
 }
 
 .works {
+	margin-bottom: 50px;
 	padding-top: 45px;
 	counter-reset: item;
 	&__item {
@@ -625,7 +626,7 @@ body.active {
 		padding: 0;
 	}
 	&__item {
-		padding-bottom: 40px;
+		padding-bottom: 48px;
 	}
 	&__link {
 		@extend .link-with-arrow;
@@ -633,6 +634,7 @@ body.active {
 }
 
 .footer {
+	margin-top: 80px;
 	background: #000000;
 	color: #ffffff;
 	&__col {
@@ -715,9 +717,8 @@ body.active {
 	justify-content: space-between;
 }
 .header_title {
+	margin-bottom: 13px;
 	font-family: 'Anton';
-	// font-size: 150px;
-	// line-height: 160px;
 	font-size: 6em;
 	line-height: 1em;
 	color: #ffffff;
@@ -747,7 +748,7 @@ body.active {
 }
 
 .project {
-	margin-bottom: 90px;
+	margin-bottom: 50px;
 	&__title {
 		margin: 0;
 		padding: 0;
@@ -763,6 +764,7 @@ body.active {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		padding-top: 20px;
 	}
 	&__preview-half {
 		width: 48%;
